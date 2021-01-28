@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>info</title>
+</head>
+ <body>
+     <div>
+         <div style = "float:left;width:33.33%;height:100%;padding-bottom:200px;">
+             <a href="{{url_for('home')}}"> Back to Home</a>
+             <h4> Born on: {{person['bday']}}</h4>
+         </div>
+         <div style ="position:absolute; top: 300px">
+            <h4> Born in the country: {{person['result']['country']}}</h4>
+             <img src={{flag_url}}>
+         </div>
+     </div>
+
+     <div style="margin-left:43%;">
+         <h1> {{person['fname']}} {{person['lname']}} </h1>
+         <div style ="position:relative; top: 240px">
+             <h2> Some Facts about {{ person['result']['continent']}}</h2>
+             <ul>
+                <li> Resides in the continent of {{ person['result']['continent'] }}</li>
+                <li> Capital city is: {{ person['result']['capital'] }} </li>
+                <li> Population is: {{ person['result']['pop'] }} </li>
+             </ul>
+         </div>
+     </div>
+ </body>
+
+</body>
+</html>

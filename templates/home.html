@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> home </title>
+</head>
+<body>
+    <div style="text-align:center;">
+        <h1> Welcome to our first app! </h1>
+        <p>
+            <a href="home">View People</a>
+            <a href="addform">Add Person</a>
+        </p>
+    </div>
+    <h2>List of Names</h2>
+    <ul>
+        {% for name in names.keys() %}
+            <li>
+                <a href="{{ url_for('viewPerson', fullname=name) }}">{{name}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
